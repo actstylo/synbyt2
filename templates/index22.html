@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}<link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endblock %}
+
+
+<!----- Django Admin Customization
+https://books.agiliq.com/projects/django-admin-cookbook/en/latest/change_text.html
+Alex Theme: http://preview.themeforest.net/item/alex-personal-portfolio-template/full_screen_preview/21401906?_ga=2.11111028.1125171575.1520868351-609594201.1520868351
+----->
+{% block content %}</br></br></br></br>
+
+<!------ Carousel Starts ------>
+	<div class="container">
+		{% include 'includes/carousel.html' %}
+	</div>
+	<!------ Carousel End ------>
+
+	<!----- Focus Section ------->
+	<div class="container mb-5 mt-5" style="background-color: #e3f2fd; padding:20px;">
+		<div class="services">
+			<h2 class='text-center'>our focus</h2>
+			<div class="row mb-5 mt-5">
+				<ul class="float-left" style="width: 16rem; margin-left:20px;">
+					<li><a href="{% url 'home' %}"><img class="rounded-circle mb-4" style="width: 10rem;" src="{% static 'img/backgroundshape.jpg' %}"></a></li>
+					<p>Robust Design</p>
+				</ul>
+				<ul class="mx-auto" style="width: 16rem;">
+					<li><a href="{% url 'home' %}"><img class="rounded-circle mb-4" style="width: 10rem;" src="{% static 'img/backgroundshape.jpg' %}"></a></li>
+					<p>Large Scale</p>
+				</ul>
+				<ul class="float-right" style="width: 16rem;">
+					<li><a href="{% url 'home' %}"><img class="rounded-circle mb-4" style="width: 10rem;" src="{% static 'img/backgroundshape.jpg' %}"></a></li>
+					<p>Consistency</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!----- End Focus ----->
+	<hr>
+	<div class="container mb-5 mt-5" style="padding: 20px;">
+		<div class="recent-work mb-10">
+			<div class="recent-work1 text-center float-left col-sm-6" style="border-right:1px solid #696969;">
+				<p style="font-size: 22px;"><a href="{% url 'home' %}">Software</a></p>
+				<p style="font-size: 18px;">With Efficiency and Speed</p>
+				<p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+			</div>
+			<div class="recent-work2 text-center float-right col-sm-6">
+				<p style="font-size: 22px;"><a href="{% url 'home' %}">Service</a></p>
+				<p style="font-size: 18px;">With Efficiency and Speed</p>
+				<p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+			</div>
+		</div>
+	</div></br></br></br></br>
+	<!------ Service Section ----->
+	<div class="container mb-5 mt-5" style="background-color: #D3D3D3; padding: 30px;">
+		<h1 class="text-center mb-5 mt-5">our services</h1>
+		<div class="row">
+			{% for k in service_object %}
+			<div class="card col-sm-4 mb-5 p-3">
+				<img class="card-img-top img-rounded mx-auto mt-4" src="{{ k.s_image.url }}" style="width:100px; height: 70px;">
+				<div class="card-body">
+					<p style="font-size: 20px;" class="card-title text-center">{{ k.title }}</p>
+					<p class="card-text">{{ k.description }}</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div></br></br>
+		<div class="card-deck">
+			<div class="card">
+				<img class="card-img-top mx-auto mt-4" src="{% static 'img/306426.png' %}" style="width:100px; height: 70px;">
+				<div class="card-body">
+					<p style="font-size: 20px;" class="card-title text-center">Software Testing</p>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img class="card-img-top mx-auto mt-4" src="{% static 'img/circular-shape.png' %}" style="width:100px; height: 70px;">
+				<div class="card-body">
+					<p style="font-size: 20px;" class="card-title text-center">Email Marketing</p>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img class="card-img-top mx-auto mt-4" src="{% static 'img/email.png' %}" style="width:100px; height: 70px;">
+				<div class="card-body">
+					<p style="font-size: 20px;" class="card-title text-center">Email Service</p>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+				</div>
+			</div>
+		</div>
+		<div class="card-deck">
+			<div class="card">
+				<img class="card-img-top mx-auto mt-4" src="{% static 'img/306426.png' %}" style="width:100px; height: 70px;">
+				<div class="card-body">
+					<p style="font-size: 20px;" class="card-title text-center">Software Testing</p>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img class="card-img-top mx-auto mt-4" src="{% static 'img/circular-shape.png' %}" style="width:100px; height: 70px;">
+				<div class="card-body">
+					<p style="font-size: 20px;" class="card-title text-center">Email Marketing</p>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+				</div>
+			</div>
+			<div class="card">
+				<img class="card-img-top mx-auto mt-4" src="{% static 'img/email.png' %}" style="width:100px; height: 70px;">
+				<div class="card-body">
+					<p style="font-size: 20px;" class="card-title text-center">Email Service</p>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!----- End Service Section ------>
+	
+	<!--- Portfolio Section ----->
+	
+	<div class="container mb-5 mt-5 pt-5 pb-5">
+		<h1 class="text-center">our portfolio</h1>
+		
+		{% include 'includes/portfolio.html' %}
+		
+	</div>
+	
+	<!---- End Portfolio Section --->
+	
+	<div class="container">
+	
+	</div>
+	
+	<!-------- Starts Testimonial Slider ------>
+	
+	<div class="container mb-5 mt-5" style="background-color: #D3D3D3; padding: 5px;">
+		<h2 class="text-center mb-5 mt-5">What our customers say</h2>
+		<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
+				<li data-target="#myCarousel" data-slide-to="5"></li>
+				<li data-target="#myCarousel" data-slide-to="6"></li>
+				<li data-target="#myCarousel" data-slide-to="7"></li>
+				<li data-target="#myCarousel" data-slide-to="8"></li>
+				<li data-target="#myCarousel" data-slide-to="9"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="carousel-item active" style="">
+					<div class="img-box"><img src="{% static 'img/01.jpg' %}" alt=""></div>
+					<p>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></p>
+					<p>www.synbyt.com</p>
+				</div>
+				{% for t in testimonial_object %}
+				<div class="carousel-item">
+					<div class="img-box"><img src="{{ t.t_image.url }}" alt=""></div>
+					<p class="text-center testimonial">{{ t.description }}</p>
+					<p class="overview"><b>{{ t.name }}</b>, {{ t.company_name }}</p>
+					<p>{{ t.website }}</p>
+				</div>
+				{% endfor %}
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div></br></br></br></br>
+	</div>
+	
+<!------- End Testimonial Slider ------>
+	<div class="container">
+		
+	</div>
+	
+	<!---- 01743603760 --->
+{% endblock %}
+	<script>
+		$(document).ready(function(){
+		
+		});
+		$('.carousel').carousel()
+	</script>

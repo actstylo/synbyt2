@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+		<div id="contact" class="container bg-grey">
+			</br></br></br><h2 class="text-center">CONTACT</h2></br></br></br>
+			<div class="row">
+				<div class="col-sm-5 float-left">
+					<p><i class="fa fa-map-marker"></i> NewYork, US</p>
+					<p><i class="fa fa-phone"></i> +880 1830466823</p>
+					<p><i class="fa fa-envelope"></i> khaled@synbyt.com</p>
+				</div>
+				<div class="col-sm-7 float-right">
+					<form role="form" action="" method="post" novalidate>
+						{% csrf_token %}
+						{% include 'includes/form.html' %}
+						<div class="row">
+							<div class="col-sm-12 form-group">
+								<button class="btn btn-default pull-right" type="submit">Send</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+{% endblock %}

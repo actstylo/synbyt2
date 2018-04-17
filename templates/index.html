@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}<link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endblock %}
+
+
+<!----- Django Admin Customization
+https://books.agiliq.com/projects/django-admin-cookbook/en/latest/change_text.html
+Alex Theme: http://preview.themeforest.net/item/alex-personal-portfolio-template/full_screen_preview/21401906?_ga=2.11111028.1125171575.1520868351-609594201.1520868351
+----->
+{% block content %}</br></br></br></br>
+
+<!------ Carousel Starts ------>
+	<div class="container">
+		{% include 'includes/carousel.html' %}
+	</div>
+	<!------ Carousel End ------>
+
+	<!----- Focus Section ------->
+	<div class="container mb-5 mt-5" style="background-color: #e3f2fd; padding:20px;">
+		<div class="services">
+			<h2 class='text-center'>our focus.</h2>
+			<div class="row mb-5 mt-5">
+				<ul class="float-left" style="width: 16rem; margin-left:20px;">
+					<li><a href="{% url 'home' %}"><img class="rounded-circle mb-4" style="width: 10rem;" src="{% static 'img/backgroundshape.jpg' %}"></a></li>
+					<p>Robust Design</p>
+				</ul>
+				<ul class="mx-auto" style="width: 16rem;">
+					<li><a href="{% url 'home' %}"><img class="rounded-circle mb-4" style="width: 10rem;" src="{% static 'img/backgroundshape.jpg' %}"></a></li>
+					<p>Large Scale</p>
+				</ul>
+				<ul class="float-right" style="width: 16rem;">
+					<li><a href="{% url 'home' %}"><img class="rounded-circle mb-4" style="width: 10rem;" src="{% static 'img/backgroundshape.jpg' %}"></a></li>
+					<p>Consistency</p>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!----- End Focus ----->
+	<hr>
+	<div class="container mb-5 mt-5" style="padding: 20px;">
+		<div class="recent-work mb-10">
+			<div class="recent-work1 text-center float-left col-sm-6" style="border-right:1px solid #696969;">
+				<p style="font-size: 22px;"><a href="{% url 'home' %}">Software</a></p>
+				<p style="font-size: 18px;">With Efficiency and Speed</p>
+				<p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+			</div>
+			<div class="recent-work2 text-center float-right col-sm-6">
+				<p style="font-size: 22px;"><a href="{% url 'home' %}">Service</a></p>
+				<p style="font-size: 18px;">With Efficiency and Speed</p>
+				<p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+			</div>
+		</div>
+	</div></br></br></br></br>
+	
+	<!------ Service Section ----->
+	<div class="container mb-5 mt-5" style="background-color: #D3D3D3; padding: 20px;">
+		<h1 class="text-center mb-5 mt-5">our services.</h1>
+		
+		{% include 'includes/service.html' %}
+		
+		</br></br>
+	</div>
+	<!----- End Service Section ------>
+	
+	<!--- Portfolio Section ----->
+	
+	<div class="container mb-5 mt-5 pt-5 pb-5">
+		<h1 class="text-center">our latest projects.</h1>
+		
+		{% include 'includes/portfolio.html' %}
+		
+	</div>
+	
+	<!---- End Portfolio Section --->
+	
+	<!------ Service Section ----->
+	<div class="container mb-5 mt-5" style="background-color: #D3D3D3; padding: 20px;">
+		<h1 class="text-center mb-5 mt-5">our VOIP & Carrier Services</h1>
+		
+		{% include 'includes/service.html' %}
+		
+		</br></br>
+	</div>
+	<!----- End Service Section ------>
+	
+	<!-------- Starts Testimonial Slider ------>
+	
+	<div class="container mb-5 mt-5" style="background-color: #D3D3D3; padding: 5px;">
+		<h2 class="text-center mb-5 mt-5">What our customers say</h2>
+		
+		{% include 'includes/testimonials.html' %}
+		
+		</br></br></br></br>
+	</div>
+	
+<!------- End Testimonial Slider ------>
+	
+	<!---- 01743603760 --->
+{% endblock %}
+	<script>
+		$(document).ready(function(){
+		
+		});
+		$('.carousel').carousel()
+	</script>

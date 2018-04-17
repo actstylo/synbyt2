@@ -1,0 +1,10 @@
+<div class="row">
+	{% for j in portfolio_object %} <!----|slice:"3"---->
+		<div class="card col-sm-4 container-view">
+			<img class="card-img-top image-style" src="{{ j.p_image.url }}" alt="synbyt">
+			<p class="title">{{ j.title }}</p>
+			<div class="overlay"></div>
+			<div class="button"><a href="{{ j.url }}" target="_blank"> VIEW DETAILS </a></div>
+		</div>
+	{% endfor %}
+</div>

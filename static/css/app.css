@@ -1,0 +1,44 @@
+.navbar-brand {
+  font-family: 'Peralta', cursive;
+}
+.display_product{
+	width:220px;
+}
+.container-alert-flash{
+	position: absolute;
+	top: 10px;
+	z-index: 5000;
+	width: 100%;
+	right: 0%;
+	margin: 0px;
+	display: none;
+}
+.text-align-center{
+	text-align: center;
+}
+.og-price{
+	color: red;
+	text-decoration: line-through;
+}
+.fa-navbar-cart{
+	font-size: 18px;
+	vertical-align: middle;
+}
+.header-bottom-right{
+	
+}
+.header-bottom-right li{
+	margin-right:30px;	
+}
+.header-bottom-right li b{
+	margin-right:30px;	
+}
+.search-box{
+	margin-top: 60px;
+}
+.phone-icon{
+	margin-right: 10px;
+}
+.footer-navbar {
+	padding: 20px;
+}

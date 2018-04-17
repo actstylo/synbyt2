@@ -1,0 +1,13 @@
+<div class="container mb-5 mt-5 pt-5 pb-5">
+	<h1 class="text-center">our portfolio</h1>
+	<div class="card-deck">
+		{% for j in portfolio_object %}
+			<div class="card container-view col-sm-4">
+				<img class="card-img-top image-style" src="{{ j.p_image.url }}" alt="synbyt" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;" >
+				<p class="title">{{ j.title }}</p>
+				<div class="overlay"></div>
+				<div class="button"><a href="{{ j.url }}"> VIEW DETAILS </a></div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

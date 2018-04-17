@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
+{% endblock %}
+
+{% block javascript %}
+  <script src="{% static 'js/simplemde.min.js' %}"></script>
+  <script>
+    var simplemde = new SimpleMDE();
+  </script>
+{% endblock %}
+
+{% block content %}
+	<div class="container"></br></br></br></br>
+		<div class="col-sm-10">
+			{% for i in title %}
+			<h3 class="text-center">{{ i.title }}</h3>
+			<p>{{ i.description }}</p>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

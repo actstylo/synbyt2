@@ -1,0 +1,40 @@
+{% extends 'base_accounts.html' %}
+
+{% load static %}
+
+{% block title %}Log in to SYNBYT{% endblock %}
+
+{% block content %}
+	<div class="row justify-content-center">
+		<div class="col-lg-4 col-md-6 col-sm-8">
+			<div class="card">
+				<div class="card-body">
+					<div class="text-center">
+						<a href="{% url 'home' %}">
+							<img class="rounded" src="{% static 'img/logo.jpg' %}" alt="" width="300" height="120">
+						</a>
+						<h3 class="card-title center">log in</h3>
+					</div>
+					<form method="post" novalidate>
+						{% csrf_token %}
+						<input type="hidden" name="next" value="{{ next }}">
+						{% include 'includes/form.html' %}
+						<button type="submit" class="btn btn-primary btn-block">log in</button>
+					</form>
+				</div>
+				<div class="card-footer text-muted text-center"> 
+					New to synbyt? <a href="{% url 'signup' %}">Sign up</a>
+				</div>
+				<div class="text-center py-2">
+					<small>
+						<a href="{% url 'password_reset' %}" class="text-muted">Forgot your password?</a>
+					</small>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
