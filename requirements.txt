@@ -1,0 +1,6 @@
+-e git+git://github.com/gkuhn1/django-admin-multiupload.git#egg=django-admin-multiupload
+Django==1.11.13
+django-multiupload==0.5.2
+django-widget-tweaks==1.4.2
+Pillow==5.1.0
+pytz==2018.4
